@@ -1,0 +1,141 @@
+.profile-modal,
+.profile-content,
+.profile-header,
+.profile-stats,
+.profile-posts,
+.profile-post-item {
+  direction: rtl;
+  text-align: right;
+}
+
+button,
+p,
+h3,
+h4,
+small {
+  direction: rtl;
+  text-align: right;
+}
+
+/* باقي الـ CSS ... */
+
+
+.profile-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.profile-content {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.profile-header h2 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: white;
+}
+
+.profile-stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background: #f9fafb;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #667eea;
+}
+
+.stat-label {
+  display: block;
+  color: #718096;
+  margin-top: 5px;
+}
+
+.profile-posts {
+  padding: 20px;
+}
+
+.profile-posts h3 {
+  margin-top: 0;
+  color: #2d3748;
+}
+
+.profile-post-item {
+  padding: 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  background: #f9fafb;
+  transition: all 0.3s ease;
+}
+
+.profile-post-item:hover {
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-post-item h4 {
+  margin: 0 0 8px 0;
+  color: #667eea;
+}
+
+.profile-post-item p {
+  margin: 0 0 8px 0;
+  color: #718096;
+}
+
+.profile-post-item small {
+  color: #a0aec0;
+  margin-right: 10px;
+}
+
+.comments-count {
+  color: #667eea;
+  font-weight: 600;
+}
+
+.no-posts,
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #718096;
+}

@@ -1,0 +1,147 @@
+.my-posts-modal,
+.my-posts-content,
+.modal-header,
+.my-posts-list {
+  direction: rtl;
+  text-align: right;
+}
+
+button,
+p,
+h3 {
+  direction: rtl;
+  text-align: right;
+}
+
+/* باقي الـ CSS ... */
+
+
+.my-posts-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.my-posts-content {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #f9fafb;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.modal-header h3 {
+  margin: 0;
+  color: #2d3748;
+  font-size: 1.3em;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #718096;
+  transition: color 0.3s;
+}
+
+.close-btn:hover {
+  color: #2d3748;
+}
+
+.my-posts-list {
+  padding: 20px;
+}
+
+.my-post-item {
+  padding: 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  background: #f9fafb;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.my-post-item:hover {
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transform: translateX(5px);
+}
+
+.my-post-item h4 {
+  margin: 0 0 8px 0;
+  color: #667eea;
+  font-size: 1.1em;
+}
+
+.my-post-item p {
+  margin: 0 0 8px 0;
+  color: #718096;
+  line-height: 1.5;
+}
+
+.my-post-item small {
+  color: #a0aec0;
+}
+
+.loading-text,
+.no-posts-text {
+  text-align: center;
+  padding: 40px;
+  color: #718096;
+  font-size: 1.1em;
+}
+
+@media (max-width: 768px) {
+  .my-posts-content {
+    max-width: 90%;
+  }
+
+  .modal-header h3 {
+    font-size: 1.1em;
+  }
+}
